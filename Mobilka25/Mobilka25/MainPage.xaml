@@ -3,22 +3,77 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mobilka25.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+    <StackLayout Orientation="Vertical" BackgroundColor="#ADD8E6">
+        <Label 
+            Text="Urządzenia Domowe"
+            FontSize="Title"
+            HorizontalOptions="Center"
+            Margin="5"
+        />
+
+        <Label
+            Text="Autor: 00000000000"
+            HorizontalOptions="Center"
+            Margin="5"
+        />
+        <StackLayout Orientation="Horizontal">
+            <Image
+                Source="pralka.jpg"    
+                Margin="20,0,20,20"
+                HeightRequest="150"
+            />
+            <StackLayout Orientation="Vertical">
+                <Label
+                    Text="Pralka"
+                    FontSize="Title"
+                />
+
+                <Entry
+                    x:Name="pralkaEntry"
+                    Placeholder="Podaj nr prania 1..12"
+                    Keyboard="Numeric"
+                    BackgroundColor="#87CEEB"
+                    TextColor="#000080"
+                />
+
+                <Button
+                    x:Name="pralkaBtn"
+                    Text="Zatwierdź"
+                    BackgroundColor="#4169E1"
+                    Margin="10"
+                />
+
+                <Label
+                    x:Name="pralkaLbl"
+                    Text="Numer prania:"
+                />
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Image
+                Source="odkurzacz.jpg"   
+                Margin="20,0,20,20"
+                HeightRequest="150"
+            />
+            <StackLayout Orientation="Vertical">
+                <Label
+                    Text="Odkurzacz"  
+                    FontSize="Title"
+                />
+                <Button
+                    x:Name="odkurzaczBtn"
+                    Text="Włącz"
+                    BackgroundColor="#4169E1"
+                    Margin="10"
+                />
+                <Label
+                    Text="Odkurzacz wyłączony"   
+                />
+                <Label
+                    Text="Status: naładowany"  
+                />
+            </StackLayout>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
