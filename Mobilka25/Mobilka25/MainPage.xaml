@@ -41,6 +41,7 @@
                     Text="Zatwierdź"
                     BackgroundColor="#4169E1"
                     Margin="10"
+                    Clicked="pralkaBtn_Clicked"
                 />
 
                 <Label
@@ -65,11 +66,14 @@
                     Text="Włącz"
                     BackgroundColor="#4169E1"
                     Margin="10"
+                    Clicked="odkurzaczBtn_Clicked"
                 />
                 <Label
+                    x:Name="stanLbl"
                     Text="Odkurzacz wyłączony"   
                 />
                 <Label
+                    x:Name="statusLbl"
                     Text="Status: naładowany"  
                 />
             </StackLayout>
